@@ -5,6 +5,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
+  /* В представленном макете в Figme'e отступы разные (49 и 51) */
   margin: 92px 49px 92px 51px;
   min-width: 1340px;
   height: 109px;
@@ -58,10 +59,11 @@
 /* --------------- Основаня секция "Оно мне надо" с картинкой --------------- */
 /* Секция с картинкой */
 .cover {
+  background-position: center;
   min-width: 1440px;
   min-height: 757px;
   position: relative;
-  z-index: -1;
+  z-index: 0;
   background-image: url(../images/lotus-flower.png);
   background-size: cover;
   display: flex;
@@ -87,24 +89,25 @@
   box-sizing: border-box;
   padding: 165px 50px 0px 50px;
   color: #fff;
-  font-family: Raleway;
+  font-family: 'Raleway', 'Arial', sans-serif;
   font-size: 100px;
   font-style: normal;
   font-weight: 700;
   line-height: 115%; /* 115px */
-  letter-spacing: 30px;
+  letter-spacing: .3em;
   text-transform: uppercase;
 }
 
 /* Строки заголовка (спан) */
 .aligned-text {
   display: block;
+  margin-bottom: 20px;
 }
 
 /* Вторая строка (по центру) */
 .aligned-text_center {
   text-align: center;
-  margin: 20px 0px;
+  /* margin: 20px 0px; */
 }
 
 /* Третья строка (справа) */
@@ -112,14 +115,19 @@
   text-align: right;
 }
 
+/* Сброс отступа у последнего элемента */
+.aligned-text:last-child {
+  margin-bottom: 0px;
+}
+
 /* Класс для установки межбуквенного интервала */
 .letter-spacing-extended {
-  letter-spacing: 60px;
+  letter-spacing: .6em;
 }
 
 /* Класс для обнуления межбуквенного интервала */
 .no-letter-spacing {
-  letter-spacing: 0px;
+  letter-spacing: 0;
 }
 
 /* Текст + кнопка внизу секции */
@@ -131,7 +139,7 @@
   align-items: center;
   margin: 0px 50px 50px 0px;
   color: #FFF;
-  font-family: Raleway;
+  font-family: 'Raleway', 'Arial', sans-serif;
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
@@ -154,13 +162,13 @@
   padding: 12px 32px;
   color: #FFF;
   background-color: transparent;
-  font-family: Raleway;
+  font-family: 'Raleway', 'Arial', sans-serif;
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
   line-height: 28px;
   text-transform: uppercase;
-  border: 1px solid #FFF;
+  border: 1px solid currentColor;
 }
 
 /* --------------- Секция с лотами --------------- */
@@ -171,7 +179,6 @@
   flex-direction: column;
   justify-content: space-between;
   min-width: 1340;
-  min-height: 579px;
   margin: 180px 50px 181px 50px;
 }
 
@@ -179,16 +186,18 @@
 .lots__heading {
   margin-left: 40px;
   color: #000;
-  font-family: Raleway;
+  font-family: 'Raleway', 'Arial', sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   text-transform: uppercase;
+  margin-bottom: 27px;
 }
 
 /* Список карточек */
 .lots__card-list {
+  flex-wrap: wrap;
   display: flex;
   gap: 25px;
   list-style: none;
@@ -198,7 +207,7 @@
 /* Один элемент списка */
 .lots__card-list-item {
   flex-grow: 1;
-  min-width: 430px;
+  width: 430px;
   min-height: 450px;
 }
 
@@ -211,36 +220,29 @@
 
 /* Карточка */
 .card {
+  background-position: center;
   position: relative;
   z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  background-size: cover;
 }
 
 /* Первая карточка */
 .card_type_film {
-  position: relative;
-  z-index: -1;
   background-image: url(../images/card-lot-01.jpg);
-  background-size: cover;
 }
 
 /* Вторая карточка */
 .card_type_book {
-  position: relative;
-  z-index: -1;
   background-image: url(../images/card-lot-02.jpg);
-  background-size: cover;
 }
 
 /* Третья карточка */
 .card_type_picture {
-  position: relative;
-  z-index: -1;
   background-image: url(../images/card-lot-03.jpg);
-  background-size: cover;
 }
 
 /* Заголовок карточки (h2) */
@@ -252,7 +254,7 @@
   padding: 50px 40px 0px;
   /* width: 350px; */
   color: #FFF;
-  font-family: Raleway;
+  font-family: 'Raleway', 'Arial', sans-serif;
   font-size: 22px;
   font-style: normal;
   font-weight: 700;
@@ -267,7 +269,7 @@
   z-index: 1;
   padding: 0px 40px 50px;
   color: #FFF;
-  font-family: Raleway;
+  font-family: 'Raleway', 'Arial', sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -275,9 +277,9 @@
 
 /* "Посмотреть больше" */
 .lots__look-more-link {
-  margin: 0px 0px 2px 40px;
+  margin: 30px 0px 2px 40px;
   color: #000;
-  font-family: Raleway;
+  font-family: 'Raleway', 'Arial', sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -291,7 +293,6 @@
   display: grid;
   grid-template-columns: 430px auto;
   min-width: 1340px;
-  min-height: 487px;
   margin: 0px 50px 180px;
   gap: 25px;
 }
@@ -301,7 +302,7 @@
   display: block;
   width: 240px;
   height: 240px;
-  border-radius: 120px;
+  border-radius: 50%;
   background-color: #000;
   margin: 0px 95px;
 }
@@ -314,12 +315,12 @@
 }
 
 /* Левая колонка */
-.about__column-1 {
+.about__column_logo {
   margin-top: 1px;
 }
 
 /* Правая колонка */
-.about__column-2 {
+.about__column_info {
   margin: 100px 0px 1px;
 }
 
@@ -334,11 +335,12 @@
 .about__text {
   font-size: 20px;
   font-weight: 400;
+  margin-bottom: 25px;
 }
 
-/* Отступ между текстами */
-.indent_text {
-  margin-bottom: 25px;
+/* Убираем отступ у последнего абзаца */
+.about__text_last {
+  margin-bottom: 0px;
 }
 
 /* --------------- Подвал сайта (футер) --------------- */
@@ -349,7 +351,6 @@
   justify-content: space-between;
   margin: 0px 50px 90px;
   min-width: 1340px;
-  min-height: 109px;
   font-size: 18px;
 }
 
@@ -372,7 +373,6 @@
   flex-direction: row;
   /* align-items: center; */
   list-style: none;
-  width: 240px;
   gap: 48px;
 }
 
