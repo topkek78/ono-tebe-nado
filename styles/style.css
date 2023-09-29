@@ -18,7 +18,7 @@
 /* Список ссылок навигации */
 .header__links-list {
   display: flex;
-  gap: 25px;
+  gap: 32px;
   list-style: circle;
   line-height: normal;
 }
@@ -93,7 +93,7 @@
   font-size: 100px;
   font-style: normal;
   font-weight: 700;
-  line-height: 115%; /* 115px */
+  line-height: 115%;
   letter-spacing: .3em;
   text-transform: uppercase;
 }
@@ -107,12 +107,13 @@
 /* Вторая строка (по центру) */
 .aligned-text_center {
   text-align: center;
-  /* margin: 20px 0px; */
+  line-height: 100%;
 }
 
 /* Третья строка (справа) */
 .aligned-text_right {
   text-align: right;
+  line-height: 100%;
 }
 
 /* Сброс отступа у последнего элемента */
@@ -151,7 +152,7 @@
 .cover__description-text {
   display: block;
   padding-right: 78px;
-  word-spacing: 20px;
+  word-spacing: 18px;
 }
 
 /* Кнопка */
@@ -252,7 +253,6 @@
   z-index: 1;
   box-sizing: border-box;
   padding: 50px 40px 0px;
-  /* width: 350px; */
   color: #FFF;
   font-family: 'Raleway', 'Arial', sans-serif;
   font-size: 22px;
@@ -329,6 +329,7 @@
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 100px;
+  text-transform: uppercase;
 }
 
 /* Текст в правой колонке */
